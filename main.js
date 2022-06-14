@@ -11,6 +11,16 @@ console.log(userDistance);
 document.getElementById("user-distance").innerHTML = userDistance;
 
 // calcolo
+const userPrice = userDistance * 0.21;
+const scontoUno = ( userPrice * 20 ) / 100;
+const scontoDue = ( userPrice * 40 ) / 100;
 if ( userAge < 18 ) {
-    
+    let userPrice = userDistance * 0.21 - scontoUno;
 }
+else if ( userAge > 65 ) {
+    let userPrice = userDistance * 0.21 - scontoDue;
+}
+else {
+    let userPrice = userDistance * 0.21;
+}
+document.getElementById("user-price").innerHTML = userPrice;
